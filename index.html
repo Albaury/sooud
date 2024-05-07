@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soudom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1 style="text-align:center; font-size: 40px; font-family: Fancy Font, cursive;">Soudom's Approach</h1>
+    <form method="POST" action="/encrypt_message">
+      <label for="text">Enter some text:</label>
+      <input type="text" id="text" name="text" required>
+      <label for="text">Enter password matrix separated by commas:</label>
+      <input type="text" id="password" name="password" required>
+      <button type="submit">Encrypt</button>
+      <textarea name="textarea" id="textarea" readonly>{{ data }}
+{{ data2 }}
+      </textarea>
+      
+      <!-- <h1>{{ data }}</h1>
+      <h1>{{ data2 }}</h1> -->
+      <button><a href="/decrypt_page">Go Decrypt</a></button>
+    </form>
+  </body>
+</html>
